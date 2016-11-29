@@ -9,7 +9,7 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
     "build": "webpack --config webpack-production.config.js --progress --colors",
-    "clean-source": "rimraf src tools .babelrc .editorconfig LICENSE package.json README.md webpack-*",
+    "clean-source": "rimraf build src tools .babelrc .editorconfig LICENSE package.json README.md webpack-*",
     "deploy": "gh-pages-deploy"
   },
   "private": true,
