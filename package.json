@@ -42,6 +42,9 @@
   "gh-pages-deploy": {
     "staticpath": "build",
     "cname": "leoliew.me",
+    "prep": [
+      "build"
+    ],
     "post": [
       "clean-source"
     ],
