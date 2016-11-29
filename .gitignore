@@ -1,0 +1,8 @@
+node_modules
+build
+
+### idea ###
+.idea
+
+### npm debug log ###
+npm-debug.log
