@@ -19,8 +19,9 @@ Server is located at http://localhost:3000
 Note: To allow external viewing of the demo, change the following value in `webpack-dev-server.config.js`
 
 ```
-host: 'localhost'  //Change to '0.0.0.0' for external facing server
+host: 'localhost'
 ```
+Note: Change to '0.0.0.0' for external facing server
 
 ### Build
 

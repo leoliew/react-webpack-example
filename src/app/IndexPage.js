@@ -12,7 +12,8 @@ const styles = {
     minWidth: '200px',
     maxWidth: '980px',
     margin: '0 auto',
-    padding: '45px'
+    padding: '20px',
+    lineHeight: '2em'
   }
 };
 
