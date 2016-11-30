@@ -34,7 +34,4 @@ export default class DividerExampleForm extends React.Component {
       />
     )
   }
-
-
-
 }
