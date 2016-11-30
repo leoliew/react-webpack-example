@@ -4,31 +4,44 @@
 import React from 'react';
 import FontIcon from 'material-ui/FontIcon';
 import {blue500, red500, greenA200} from 'material-ui/styles/colors';
+import HomeIcon from 'material-ui/svg-icons/action/home';
+import ShowCaseCard from './ShowCaseCard';
 
 const iconStyles = {
   marginRight: 24,
 };
 
-const FontIconExampleSimple = () => (
-  <div>
-    <FontIcon
-      className="muidocs-icon-action-home"
-      style={iconStyles}
-    />
+export default class FontIconExampleSimple extends React.Component {
 
-    <FontIcon
-      className="muidocs-icon-action-home"
-      style={iconStyles}
-      color={blue500}
-    />
+  render() {
+    var showCase =
+        <div>
+          <HomeIcon
+            style={iconStyles}
+          />
 
-    <FontIcon
-      className="muidocs-icon-action-home"
-      style={iconStyles}
-      color={red500}
-      hoverColor={greenA200}
-    />
-  </div>
-);
+          <HomeIcon
+            style={iconStyles}
+            color={blue500}
+          />
 
-export default FontIconExampleSimple;
+          <HomeIcon
+            style={iconStyles}
+            color={red500}
+            hoverColor={greenA200}
+          />
+        </div>
+      ;
+    return(
+      <ShowCaseCard
+        title="Custom icon font"
+        subtitle="This example uses a custom font (not part of Material-UI). The className defines the specific icon. The third example has a hoverColor defined."
+        text={showCase}
+      />
+    )
+  }
+
+
+
+
+}
