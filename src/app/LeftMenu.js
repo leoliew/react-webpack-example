@@ -10,9 +10,8 @@ import AppBar from 'material-ui/AppBar';
 import {Link} from 'react-router'
 import Subheader from 'material-ui/Subheader';
 import Divider from 'material-ui/Divider';
+import ThemeFactory from '../res/styles/ThemeFactory';
 
-//paddingTop: '18px',
-// paddingBottom: '17px',
 
 const styles = {
   menuItem: {
@@ -42,7 +41,8 @@ export default class DrawerUndockedExample extends React.Component {
     super(props);
     this.state = {
       open: false,
-      title: 'Material-UI'
+      title: 'Material-UI',
+      appBarBackgroundColor: ThemeFactory.Default
     };
   }
 
@@ -52,9 +52,13 @@ export default class DrawerUndockedExample extends React.Component {
 
   render() {
     var appBarTitle = this.state.title;
+    var appBarBackgroundColor = this.state.appBarBackgroundColor;
     var currentRoute = this.props.routes[this.props.routes.length - 1];
     if (currentRoute && currentRoute.name) {
-      appBarTitle = currentRoute.name
+      appBarTitle = currentRoute.name;
+      console.log(currentRoute.name);
+      appBarBackgroundColor = ThemeFactory[currentRoute.name];
+      // this.setState({appBarBackgroundColor:ThemeFactory[currentRoute.name]});
     }
     return (
       <MuiThemeProvider>
@@ -62,6 +66,7 @@ export default class DrawerUndockedExample extends React.Component {
           <AppBar
             onLeftIconButtonTouchTap={this.handleToggle}
             title={appBarTitle}
+            style={{backgroundColor: appBarBackgroundColor}}
             iconClassNameRight="muidocs-icon-navigation-expand-more"
           />
           <Drawer
