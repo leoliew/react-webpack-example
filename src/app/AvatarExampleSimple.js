@@ -21,7 +21,7 @@ import {
 } from 'material-ui/styles/colors';
 
 const styles = {
-  avatar:{
+  avatar: {
     margin: 5
   }
 };
