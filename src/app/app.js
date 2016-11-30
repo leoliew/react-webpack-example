@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router'
+import IndexPage from './IndexPage';
 import GridListExample from './components/GridListExampleSimple';
-import DrawerOpenRightExample from './HomePage';
+import DrawerOpenRightExample from './LeftMenu';
 import AutoCompleteExampleSimple from './components/AutoCompleteExample';
 import AvatarExampleSimple from './components/AvatarExampleSimple';
 import BadgeExampleSimple from './components/BadgeExampleSimple';
@@ -34,6 +35,7 @@ import TimePickerExampleSimple from './components/TimePickerExampleSimple';
 import ToolbarExamplesSimple from './components/ToolbarExamplesSimple';
 
 
+
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
@@ -51,7 +53,7 @@ const GridListExampleComponent = () => (
 ReactDOM.render((
   <Router history={hashHistory}>
     <Route path="/" component={DrawerOpenRightExample}>
-      <IndexRoute component={GridListExampleComponent}/>
+      <IndexRoute component={IndexPage}/>
       <Route path="/auto_complete" name="AutoComplete" component={AutoCompleteExampleSimple}/>
       <Route path="/avatar" name="Avatar" component={AvatarExampleSimple}/>
       <Route path="/badge" name="Badge" component={BadgeExampleSimple}/>
