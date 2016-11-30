@@ -3,13 +3,24 @@
  */
 import React from 'react';
 import CircularProgress from 'material-ui/CircularProgress';
+import ShowCaseCard from './ShowCaseCard';
 
-const CircularProgressExampleSimple = () => (
-  <div>
-    <CircularProgress />
-    <CircularProgress size={60}  />
-    <CircularProgress size={80}  />
-  </div>
-);
+export default class ProgressExampleSimple extends React.Component {
 
-export default CircularProgressExampleSimple;
+  render() {
+    var showCase =
+        <div>
+          <CircularProgress />
+          <CircularProgress size={60}/>
+          <CircularProgress size={80}/>
+        </div>
+      ;
+    return (
+      <ShowCaseCard
+        title="Indeterminate progress"
+        subtitle="By default, the indicator animates continuously."
+        text={showCase}
+      />
+    )
+  }
+}
