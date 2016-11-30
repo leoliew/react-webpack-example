@@ -1,6 +1,7 @@
 import React from 'react';
 import Snackbar from 'material-ui/Snackbar';
 import RaisedButton from 'material-ui/RaisedButton';
+import ShowCaseCard from './ShowCaseCard';
 
 export default class SnackbarExampleSimple extends React.Component {
 
@@ -24,19 +25,26 @@ export default class SnackbarExampleSimple extends React.Component {
   };
 
   render() {
+    var showCase =
+        <div>
+          <RaisedButton
+            onTouchTap={this.handleTouchTap}
+            label="Add to my calendar"
+          />
+          <Snackbar
+            open={this.state.open}
+            message="Event added to your calendar"
+            autoHideDuration={4000}
+            onRequestClose={this.handleRequestClose}
+          />
+        </div>
+      ;
     return (
-      <div>
-        <RaisedButton
-          onTouchTap={this.handleTouchTap}
-          label="Add to my calendar"
-        />
-        <Snackbar
-          open={this.state.open}
-          message="Event added to your calendar"
-          autoHideDuration={4000}
-          onRequestClose={this.handleRequestClose}
-        />
-      </div>
+      <ShowCaseCard
+        title="Simple example"
+        subtitle="Snackbar is a controlled component, and is displayed when open is true. Click away from the Snackbar to close it, or wait for autoHideDuration to expire."
+        text={showCase}
+      />
     );
   }
 }
