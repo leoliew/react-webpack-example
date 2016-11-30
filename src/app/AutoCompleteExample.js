@@ -8,8 +8,11 @@ import FlatButton from 'material-ui/FlatButton';
 import MenuItem from 'material-ui/MenuItem';
 
 const styles = {
-  card: {
-    margin: '2%'
+  div: {
+    margin: '1%'
+  },
+  card:{
+    marginTop: '15px'
   }
 };
 
@@ -107,7 +110,7 @@ export default class AutoCompleteExampleSimple extends React.Component {
 
   render() {
     return (
-      <div style={styles.card}>
+      <div style={styles.div}>
         <Card style={styles.card}>
           <CardTitle title="Simple example"
                      subtitle="The input is used to create the dataSource, so the input always matches three entries."/>
