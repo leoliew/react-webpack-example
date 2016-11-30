@@ -42,7 +42,8 @@ const config = {
         exclude: [nodeModulesPath]
       },
       {test: /\.(png|jpg)$/, loader: 'url-loader?limit=100000'},
-      {test: /\.json$/, loader: 'json'}
+      {test: /\.json$/, loader: 'json'},
+      {test: /\.md$/, loader: "html!markdown" }
     ]
   }
 };

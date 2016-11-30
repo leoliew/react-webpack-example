@@ -57,21 +57,21 @@ ReactDOM.render((
       <Route path="/auto_complete" name="AutoComplete" component={AutoCompleteExampleSimple}/>
       <Route path="/avatar" name="Avatar" component={AvatarExampleSimple}/>
       <Route path="/badge" name="Badge" component={BadgeExampleSimple}/>
-      <Route path="/bottom_navigation" name="Bottom Navigation" component={BottomNavigationExampleSimple}/>
+      <Route path="/bottom_navigation" name="BottomNavigation" component={BottomNavigationExampleSimple}/>
       <Route path="/buttons" name="Buttons" component={FlatButtonExampleSimple}/>
       <Route path="/card" name="Card" component={CardExampleWithAvatar}/>
       <Route path="/chip" name="Chip" component={ChipExampleSimple}/>
-      <Route path="/date_picker" name="Date Picker" component={DatePickerExampleSimple}/>
+      <Route path="/date_picker" name="DatePicker" component={DatePickerExampleSimple}/>
       <Route path="/dialog" name="Dialog" component={DialogExampleSimple}/>
       <Route path="/divider" name="Divider" component={DividerExampleForm}/>
-      <Route path="/gird_list" name="Gird List" component={GridListExampleComponent}/>
+      <Route path="/gird_list" name="GirdList" component={GridListExampleComponent}/>
       <Route path="/icons" name="Icons" component={FontIconExampleSimple}/>
       <Route path="/list" name="List" component={ListExampleSimple}/>
       <Route path="/menu" name="Menu" component={MenuExampleSimple}/>
       <Route path="/paper" name="Paper" component={PaperExampleSimple}/>
       <Route path="/popover" name="Popover" component={PopoverExampleSimple}/>
       <Route path="/progress" name="Progress" component={CircularProgressExampleSimple}/>
-      <Route path="/select_field" name="Select Field" component={SelectFieldExampleSimple}/>
+      <Route path="/select_field" name="SelectField" component={SelectFieldExampleSimple}/>
       <Route path="/slider" name="Slider" component={SliderExampleSimple}/>
       <Route path="/switches" name="Switches" component={CheckboxExampleSimple}/>
       <Route path="/snack_bar" name="SnackBar" component={SnackbarExampleSimple}/>
@@ -79,8 +79,8 @@ ReactDOM.render((
       <Route path="/sub_header" name="SubHeader" component={ListExampleChat}/>
       <Route path="/table" name="Table" component={TableExampleSimple}/>
       <Route path="/tabs" name="Tabs" component={TabsExampleSimple}/>
-      <Route path="/text_field" name="Text Field" component={TextFieldExampleSimple}/>
-      <Route path="/time_picker" name="Time Picker" component={TimePickerExampleSimple}/>
+      <Route path="/text_field" name="TextField" component={TextFieldExampleSimple}/>
+      <Route path="/time_picker" name="TimePicker" component={TimePickerExampleSimple}/>
       <Route path="/tool_bar" name="Toolbar" component={ToolbarExamplesSimple}/>
     </Route>
   </Router>
