@@ -28,6 +28,9 @@ const styles = {
   },
   menuItemDiv: {
     paddingTop: '12px'
+  },
+  childDiv: {
+    margin: '1%'
   }
 };
 
@@ -78,7 +81,9 @@ export default class DrawerUndockedExample extends React.Component {
               ))}
             </div>
           </Drawer>
-          {this.props.children}
+          <div style={styles.childDiv}>
+            {this.props.children}
+          </div>
         </div>
       </MuiThemeProvider>
     );
