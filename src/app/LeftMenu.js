@@ -11,6 +11,8 @@ import {Link} from 'react-router'
 import Subheader from 'material-ui/Subheader';
 import Divider from 'material-ui/Divider';
 import ThemeFactory from '../res/styles/ThemeFactory';
+import GitHubForkRibbon from 'react-github-fork-ribbon';
+
 
 
 const styles = {
@@ -63,6 +65,11 @@ export default class DrawerUndockedExample extends React.Component {
     return (
       <MuiThemeProvider>
         <div>
+          <GitHubForkRibbon href="https://github.com/leoliew/react-webpack-example"
+                            target="_blank"
+                            position="right">
+            Fork me on GitHub
+          </GitHubForkRibbon>
           <AppBar
             onLeftIconButtonTouchTap={this.handleToggle}
             title={appBarTitle}
