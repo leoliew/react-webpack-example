@@ -4,6 +4,7 @@
 import React from 'react';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
+import ShowCaseCard from './ShowCaseCard';
 
 const styles = {
   card: {
@@ -11,12 +12,10 @@ const styles = {
   }
 };
 
-const CardExampleWithAvatar = () => (
-  <div style={styles.card}>
-    <Card style={styles.card}>
-      <CardTitle title="Simple example"
-                 subtitle="The input is used to create the dataSource, so the input always matches three entries."/>
-      <CardText>
+class FlatButtonExampleSimple extends React.Component {
+
+  render() {
+    var showCase =
         <Card >
           <CardHeader
             title="URL Avatar"
@@ -26,9 +25,9 @@ const CardExampleWithAvatar = () => (
           <CardMedia
             overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
           >
-            <img src="images/nature-600-337.jpg" />
+            <img src="images/nature-600-337.jpg"/>
           </CardMedia>
-          <CardTitle title="Card title" subtitle="Card subtitle" />
+          <CardTitle title="Card title" subtitle="Card subtitle"/>
           <CardText>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
@@ -36,13 +35,20 @@ const CardExampleWithAvatar = () => (
             Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
           </CardText>
           <CardActions>
-            <FlatButton label="Action1" />
-            <FlatButton label="Action2" />
+            <FlatButton label="Action1"/>
+            <FlatButton label="Action2"/>
           </CardActions>
         </Card>
-      </CardText>
-    </Card>
-    </div>
-);
+      ;
+    return (
+      <ShowCaseCard
+        title="Simple example"
+        subtitle="The input is used to create the dataSource, so the input always matches three entries."
+        text={showCase}
+      />
+    )
+  }
 
-export default CardExampleWithAvatar;
+}
+
+export default FlatButtonExampleSimple;
