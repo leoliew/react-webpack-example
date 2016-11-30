@@ -34,7 +34,7 @@ const tilesData = [
     author: 'Danson67'
   },
   {
-    img: ('../images/grid-list/morning-819362_640.jpg'),
+    img: ('images/grid-list/morning-819362_640.jpg'),
     title: 'Morning',
     author: 'fancycrave1'
   },

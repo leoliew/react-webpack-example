@@ -6,12 +6,7 @@ import AutoComplete from 'material-ui/AutoComplete';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import MenuItem from 'material-ui/MenuItem';
-
-const styles = {
-  card: {
-    margin: '2%'
-  }
-};
+import ShowCaseCard from './ShowCaseCard';
 
 
 const dataSource1 = [
@@ -106,70 +101,77 @@ export default class AutoCompleteExampleSimple extends React.Component {
   };
 
   render() {
+    var showCases = [
+      {
+        title: "Simple example",
+        subtitle: "The input is used to create the dataSource, so the input always matches three entries.",
+        text: <div>
+          <AutoComplete
+            hintText="Type anything"
+            dataSource={this.state.dataSource}
+            onUpdateInput={this.handleUpdateInput}/>
+          <AutoComplete
+            hintText="Type anything"
+            dataSource={this.state.dataSource}
+            onUpdateInput={this.handleUpdateInput}
+            floatingLabelText="Full width"
+            fullWidth={true}
+          />
+        </div>
+      },
+      {
+        title: "Data sources",
+        subtitle: "The first example has MenuItems in its data source that display on data entry. The second example uses an array of values as its dataSource, and updates onFocus Both examples have filtering disabled.",
+        text: <div>
+          <AutoComplete
+            hintText="text-value data"
+            filter={AutoComplete.noFilter}
+            dataSource={dataSource1}
+          /><br />
+          <AutoComplete
+            floatingLabelText="showAllItems"
+            filter={AutoComplete.noFilter}
+            openOnFocus={true}
+            dataSource={dataSource2}
+          /><br />
+          <AutoComplete
+            floatingLabelText="Same text, different values"
+            filter={AutoComplete.noFilter}
+            openOnFocus={true}
+            dataSource={dataSource3}
+            dataSourceConfig={dataSourceConfig}
+          />
+        </div>
+      },
+      {
+        title: "Filters",
+        subtitle: "Two examples of filtering. The first uses caseInsensitiveFilter, the second uses fuzzyFilter, and limits the number of results displayed using the maxSearchResults property.Type 'r', case insensitive",
+        text: <div>
+          <AutoComplete
+            floatingLabelText="Type 'r', case insensitive"
+            filter={AutoComplete.caseInsensitiveFilter}
+            dataSource={colors}
+          />
+          <br />
+          <AutoComplete
+            floatingLabelText="Type 'peah', fuzzy search"
+            filter={AutoComplete.fuzzyFilter}
+            dataSource={fruit}
+            maxSearchResults={5}
+          />
+        </div>
+      }
+    ];
     return (
-      <div style={styles.card}>
-        <Card style={styles.card}>
-          <CardTitle title="Simple example"
-                     subtitle="The input is used to create the dataSource, so the input always matches three entries."/>
-          <CardText>
-            <AutoComplete
-              hintText="Type anything"
-              dataSource={this.state.dataSource}
-              onUpdateInput={this.handleUpdateInput}
-            />
-            <AutoComplete
-              hintText="Type anything"
-              dataSource={this.state.dataSource}
-              onUpdateInput={this.handleUpdateInput}
-              floatingLabelText="Full width"
-              fullWidth={true}
-            />
-          </CardText>
-        </Card>
-        <Card style={styles.card}>
-          <CardTitle title="Data sources"
-                     subtitle="The first example has MenuItems in its data source that display on data entry. The second example uses an array of values as its dataSource, and updates onFocus Both examples have filtering disabled."/>
-          <CardText>
-            <AutoComplete
-              hintText="text-value data"
-              filter={AutoComplete.noFilter}
-              dataSource={dataSource1}
-            /><br />
-            <AutoComplete
-              floatingLabelText="showAllItems"
-              filter={AutoComplete.noFilter}
-              openOnFocus={true}
-              dataSource={dataSource2}
-            /><br />
-            <AutoComplete
-              floatingLabelText="Same text, different values"
-              filter={AutoComplete.noFilter}
-              openOnFocus={true}
-              dataSource={dataSource3}
-              dataSourceConfig={dataSourceConfig}
-            />
-          </CardText>
-        </Card>
-        <Card style={styles.card}>
-          <CardTitle title="Filters"
-                     subtitle="Two examples of filtering. The first uses caseInsensitiveFilter, the second uses fuzzyFilter, and limits the number of results displayed using the maxSearchResults property.
-Type 'r', case insensitive
-"/>
-          <CardText>
-            <AutoComplete
-              floatingLabelText="Type 'r', case insensitive"
-              filter={AutoComplete.caseInsensitiveFilter}
-              dataSource={colors}
-            />
-            <br />
-            <AutoComplete
-              floatingLabelText="Type 'peah', fuzzy search"
-              filter={AutoComplete.fuzzyFilter}
-              dataSource={fruit}
-              maxSearchResults={5}
-            />
-          </CardText>
-        </Card>
+      <div>
+        {showCases.map((showCase, i) => (
+          <ShowCaseCard
+            key={i}
+            title={showCase.title}
+            subtitle={showCase.subtitle}
+            text={showCase.text}
+          />
+        ))}
       </div>
     );
   }

@@ -6,7 +6,7 @@ This is an example project that uses [Material-UI](http://callemall.github.io/ma
 
 After cloning the repository, install dependencies:
 ```sh
-cd <project folder>/material-ui/examples/webpack-example
+cd <project folder>
 npm install
 ```
 
@@ -45,5 +45,42 @@ The HTML Webpack Plugin, for example, will add the index.html to your build fold
 #### Modules
 
 Modules and other things that are required will usually need to be loaded and interpreted by Webpack when bundling, and this is where Webpack looks for the different loaders.
-*Loading .js files in es6 and es7 will require a loader like babel-loader to interpret the files into es5.
-=======
+Loading .js files in es6 and es7 will require a loader like babel-loader to interpret the files into es5.
+
+#### Build And Deploy to Gh-Pages
+
+```npm run build``` build static file
+```npm run deploy``` build static file and deploy to gh-pages
+
+## Example
+
+### Material Design Components
+
+- [Auto Complete](http://www.leoliew.me/react-webpack-example/#/auto_complete)
+- [Avatar](http://www.leoliew.me/react-webpack-example/#/avatar)
+- [Badge](http://www.leoliew.me/react-webpack-example/#/badge)
+- [Bottom Navigation](http://www.leoliew.me/react-webpack-example/#/bottom_navigation)
+- [Buttons](http://www.leoliew.me/react-webpack-example/#/buttons)
+- [Card](http://www.leoliew.me/react-webpack-example/#/card)
+- [Chip](http://www.leoliew.me/react-webpack-example/#/chip)
+- [Date Picker](http://www.leoliew.me/react-webpack-example/#/date_picker)
+- [Dialog](http://www.leoliew.me/react-webpack-example/#/dialog)
+- [Divider](http://www.leoliew.me/react-webpack-example/#/divider)
+- [Gird List](http://www.leoliew.me/react-webpack-example/#/gird_list)
+- [Icons](http://www.leoliew.me/react-webpack-example/#/icons)
+- [List](http://www.leoliew.me/react-webpack-example/#/list)
+- [Menus](http://www.leoliew.me/react-webpack-example/#/menu)
+- [Paper](http://www.leoliew.me/react-webpack-example/#/paper)
+- [Popover](http://www.leoliew.me/react-webpack-example/#/popover)
+- [Progress](http://www.leoliew.me/react-webpack-example/#/progress)
+- [Select Filed](http://www.leoliew.me/react-webpack-example/#/select_field)
+- [Slider](http://www.leoliew.me/react-webpack-example/#/slider)
+- [Switches](http://www.leoliew.me/react-webpack-example/#/switches)
+- [SnackBar](http://www.leoliew.me/react-webpack-example/#/snack_bar)
+- [Stepper](http://www.leoliew.me/react-webpack-example/#/stepper)
+- [SubHeader](http://www.leoliew.me/react-webpack-example/#/sub_header)
+- [Table](http://www.leoliew.me/react-webpack-example/#/table)
+- [Tabs](http://www.leoliew.me/react-webpack-example/#/tabs)
+- [Text Field](http://www.leoliew.me/react-webpack-example/#/text_field)
+- [Time Picker](http://www.leoliew.me/react-webpack-example/#/time_picker)
+- [Toolbar](http://www.leoliew.me/react-webpack-example/#/tool_bar)

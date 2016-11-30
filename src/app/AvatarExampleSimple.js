@@ -9,6 +9,7 @@ import FontIcon from 'material-ui/FontIcon';
 import List from 'material-ui/List/List';
 import ListItem from 'material-ui/List/ListItem';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import ShowCaseCard from './ShowCaseCard';
 
 import {
   blue300,
@@ -19,59 +20,54 @@ import {
   purple500,
 } from 'material-ui/styles/colors';
 
-
 const styles = {
-  card: {
-    margin: '2%'
-  },
-  avatar:{
+  avatar: {
     margin: 5
   }
 };
+
 
 /**
  * Examples of `Avatar` using an image, [Font Icon](/#/components/font-icon), [SVG Icon](/#/components/svg-icon)
  * and "Letter" (string), with and without custom colors at the default size (`40dp`) and an alternate size (`30dp`).
  */
-const AvatarExampleSimple = () => (
-
-  <div style={styles.card}>
-    <Card style={styles.card}>
-      <CardTitle title="Simple example"
-                 subtitle="The input is used to create the dataSource, so the input always matches three entries."/>
-      <CardText>
-        <List>
-          <ListItem
-            disabled={true}
-            leftAvatar={
+export default class AvatarExampleSimple extends React.Component {
+  render() {
+    var showCase = {
+      title: "Simple example",
+      subtitle: "The input is used to create the dataSource, so the input always matches three entries.",
+      text: <List>
+        <ListItem
+          disabled={true}
+          leftAvatar={
         <Avatar src="images/uxceo-128.jpg" />
       }
-          >
-            Image Avatar
-          </ListItem>
-          <ListItem
-            disabled={true}
-            leftAvatar={
+        >
+          Image Avatar
+        </ListItem>
+        <ListItem
+          disabled={true}
+          leftAvatar={
         <Avatar
           src="images/uxceo-128.jpg"
           size={30}
           style={styles.avatar}
         />
       }
-          >
-            Image Avatar with custom size
-          </ListItem>
-          <ListItem
-            disabled={true}
-            leftAvatar={
+        >
+          Image Avatar with custom size
+        </ListItem>
+        <ListItem
+          disabled={true}
+          leftAvatar={
         <Avatar icon={<FontIcon className="muidocs-icon-communication-voicemail" />} />
       }
-          >
-            FontIcon Avatar
-          </ListItem>
-          <ListItem
-            disabled={true}
-            leftAvatar={
+        >
+          FontIcon Avatar
+        </ListItem>
+        <ListItem
+          disabled={true}
+          leftAvatar={
         <Avatar
           icon={<FontIcon className="muidocs-icon-communication-voicemail" />}
           color={blue300}
@@ -80,20 +76,20 @@ const AvatarExampleSimple = () => (
           style={styles.avatar}
         />
       }
-          >
-            FontIcon Avatar with custom colors and size
-          </ListItem>
-          <ListItem
-            disabled={true}
-            leftAvatar={
+        >
+          FontIcon Avatar with custom colors and size
+        </ListItem>
+        <ListItem
+          disabled={true}
+          leftAvatar={
         <Avatar icon={<FileFolder />} />
       }
-          >
-            SvgIcon Avatar
-          </ListItem>
-          <ListItem
-            disabled={true}
-            leftAvatar={
+        >
+          SvgIcon Avatar
+        </ListItem>
+        <ListItem
+          disabled={true}
+          leftAvatar={
         <Avatar
           icon={<FileFolder />}
           color={orange200}
@@ -102,18 +98,18 @@ const AvatarExampleSimple = () => (
           style={styles.avatar}
         />
       }
-          >
-            SvgIcon Avatar with custom colors and size
-          </ListItem>
-          <ListItem
-            disabled={true}
-            leftAvatar={<Avatar>A</Avatar>}
-          >
-            Letter Avatar
-          </ListItem>
-          <ListItem
-            disabled={true}
-            leftAvatar={
+        >
+          SvgIcon Avatar with custom colors and size
+        </ListItem>
+        <ListItem
+          disabled={true}
+          leftAvatar={<Avatar>A</Avatar>}
+        >
+          Letter Avatar
+        </ListItem>
+        <ListItem
+          disabled={true}
+          leftAvatar={
         <Avatar
           color={deepOrange300}
           backgroundColor={purple500}
@@ -123,17 +119,20 @@ const AvatarExampleSimple = () => (
           A
         </Avatar>
       }
-          >
-            Letter Avatar with custom colors and size
-          </ListItem>
-        </List>
-      </CardText>
-    </Card>
-  </div>
+        >
+          Letter Avatar with custom colors and size
+        </ListItem>
+      </List>
+    };
+    return (
+      <div>
+        <ShowCaseCard
+          title={showCase.title}
+          subtitle={showCase.subtitle}
+          text={showCase.text}
+        />
+      </div>
+    )
+  }
+}
 
-
-
-
-);
-
-export default AvatarExampleSimple;
