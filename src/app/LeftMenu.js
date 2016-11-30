@@ -11,11 +11,13 @@ import {Link} from 'react-router'
 import Subheader from 'material-ui/Subheader';
 import Divider from 'material-ui/Divider';
 
+//paddingTop: '18px',
+// paddingBottom: '17px',
+
 const styles = {
   menuItem: {
-    paddingTop: '18px',
-    paddingBottom: '17px',
     paddingLeft: '6px',
+    lineHeight: "43px",
     fontSize: '13px',
     fontWeight: 'bold'
   },
@@ -50,8 +52,8 @@ export default class DrawerUndockedExample extends React.Component {
 
   render() {
     var appBarTitle = this.state.title;
-    var currentRoute = this.props.routes[this.props.routes.length-1];
-    if(currentRoute && currentRoute.name){
+    var currentRoute = this.props.routes[this.props.routes.length - 1];
+    if (currentRoute && currentRoute.name) {
       appBarTitle = currentRoute.name
     }
     return (
@@ -68,16 +70,19 @@ export default class DrawerUndockedExample extends React.Component {
             open={this.state.open}
             onRequestChange={(open) => this.setState({open})}
           >
-            <Subheader style={styles.subHeader}>Google</Subheader>
+            <Link style={{ textDecoration: 'none' }} to="/">
+              <Subheader style={styles.subHeader} onTouchTap={this.handleClose}>Google</Subheader>
+            </Link>
             <Divider />
             <div style={styles.menuItemDiv}>
-              {this.props.route.childRoutes.map((route,i) => (
+              {this.props.route.childRoutes.map((route, i) => (
                 <MenuItem
                   key={i}
                   onTouchTap={this.handleClose}
                   containerElement={<Link to={route.path}/>}
-                ><span style={styles.menuItem}>{route.name}</span>
-                </MenuItem>
+                  primaryText={route.name}
+                  style={styles.menuItem}
+                />
               ))}
             </div>
           </Drawer>
