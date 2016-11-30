@@ -40,20 +40,26 @@ export default class DialogExampleSimple extends React.Component {
         onTouchTap={this.handleClose}
       />,
     ];
-
+    var showCase =
+        <div>
+          <RaisedButton label="Dialog" onTouchTap={this.handleOpen}/>
+          <Dialog
+            title="Dialog With Actions"
+            actions={actions}
+            modal={false}
+            open={this.state.open}
+            onRequestClose={this.handleClose}
+          >
+            The actions in this window were passed in as an array of React objects.
+          </Dialog>
+        </div>
+      ;
     return (
-      <div>
-        <RaisedButton label="Dialog" onTouchTap={this.handleOpen} />
-        <Dialog
-          title="Dialog With Actions"
-          actions={actions}
-          modal={false}
-          open={this.state.open}
-          onRequestClose={this.handleClose}
-        >
-          The actions in this window were passed in as an array of React objects.
-        </Dialog>
-      </div>
+      <ShowCaseCard
+        title="Simple dialog"
+        subtitle="Dialog with action buttons. The actions are passed in as an array of React objects, in this example FlatButtons.You can also close this dialog by clicking outside the dialog, or with the 'Esc' key."
+        text={showCase}
+      />
     );
   }
 }
