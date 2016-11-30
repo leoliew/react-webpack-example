@@ -34,7 +34,7 @@ const ThemeFlags = {
   Tabs: '#673AB7', //DeepPurple
   TextField: '#3F51B5', //Indigo
   TimePicker: '#2196F3', //Blue
-  Toolbar: '#03A9F4', //LightBlue
+  Toolbar: '#03A9F4' //LightBlue
 };
 
 
