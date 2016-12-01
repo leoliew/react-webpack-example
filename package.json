@@ -46,7 +46,7 @@
   },
   "gh-pages-deploy": {
     "staticpath": "build",
-    "cname": "www.leoliew.me",
+    "cname": "material.leoliew.me",
     "prep": [
       "build"
     ],
