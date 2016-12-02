@@ -58,9 +58,7 @@ export default class DrawerUndockedExample extends React.Component {
     var currentRoute = this.props.routes[this.props.routes.length - 1];
     if (currentRoute && currentRoute.name) {
       appBarTitle = currentRoute.name;
-      console.log(currentRoute.name);
       appBarBackgroundColor = ThemeFactory[currentRoute.name];
-      // this.setState({appBarBackgroundColor:ThemeFactory[currentRoute.name]});
     }
     return (
       <MuiThemeProvider>
